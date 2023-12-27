@@ -1,9 +1,21 @@
 class Plane:
-    def __init__(self):
-        return
+    def __init__(self, name):
+        self.__name = name
+        self.__flights = []
+
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def flights(self):
+        return self.__flights
 
     def __str__(self):
-        return
+        return f"Самолет авиакомпании: {self.name}"
+
+    def add_flight(self, flight):
+        self.__flights.append(flight)
 
 
 class Flight:
@@ -29,8 +41,10 @@ def create_plane():
 def create_flight():
     return
 
+
 def create_ticket():
     return
+
 
 def menu():
     plane = None
